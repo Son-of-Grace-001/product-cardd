@@ -1,0 +1,145 @@
+@import url(https://fonts.google.com/specimen/Montserrat);
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Montserrat;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  transform: translateY(-50, -50%);
+}
+
+main{
+  background-color: hsl(30, 38%, 92%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px 100px 50px 100px;
+}
+
+.icon{
+  background-image: url(./images/image-product-desktop.jpg);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-position: cover;
+  background-size: cover;
+}
+
+.product-view{
+  padding: 40px;
+  background-color: hsl(0, 0%, 100%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.product{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color:  hsl(228, 12%, 48%);
+  font-size: 20px;
+}
+
+.name{
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.name-1{
+  display: none;
+}
+
+.description{
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: hsl(228, 12%, 48%);
+}
+
+.btn{
+  display: flex;
+  height: 40px;
+  width: 100%;
+  color:hsl(0, 0%, 100%) ;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: hsl(158, 36%, 37%);
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+}
+.prices{
+  display: flex;
+  align-items: center;
+}
+.new-price{
+  margin-right: 10px;
+  color: hsl(158, 36%, 37%);
+}
+.old-price{
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+.product-view > button > p{
+  margin-left: 8px;
+}
+.btn:hover{
+  cursor: pointer;
+  background-color: hsl(158, 36%, 20%);
+}
+
+@media screen and (max-width:600px){ 
+  body{
+    position: relative;
+    left: 0%;
+    top: 0%;
+    background-color: hsl(30, 38%, 92%);
+  }
+  main{
+    background-color: hsl(30, 38%, 92%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70%;
+    padding: 30px 20px 30px 20px;
+  }
+  .product-view{
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+  .btn{
+    width: 100%;
+  }
+  .name{
+    display: none;
+  }
+  .name-1{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .icon{
+    background-image: url(./images/image-product-mobile.jpg);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-position: cover;
+    background-size: cover;
+    border-bottom-left-radius: 0px;
+  }
+ 
+  .description{
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
